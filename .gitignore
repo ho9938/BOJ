@@ -1,3 +1,10 @@
-*test*
-*input*
-*output*
+# ignore all
+*
+
+# unignore all with extensions
+!*.c
+!*.cpp
+!*.py
+
+# unignore all dirs
+!*/
