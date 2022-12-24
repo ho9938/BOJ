@@ -20,13 +20,18 @@ do
 		./test < in$i > result
 	fi
 
-	diff=$(diff out$i result)
-	if [[ $diff ]]; then
-		echo "test case $i failed"
-		echo "$diff"
-	else
-		echo "test case $i passed"
-	fi
+	# diff=$(diff -y --suppress-common-lines out$i result)
+	# if [[ $diff ]]; then
+	# 	echo "test case $i failed"
+	# 	echo "$diff"
+	# else
+	# 	echo "test case $i passed"
+	# fi
+
+	echo "test case $i validation start..."
+	diff -y result out$i
+	echo ""
+	echo "test case $i validation complete..."
 	
 done
 
