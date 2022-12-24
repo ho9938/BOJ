@@ -8,3 +8,6 @@
 
 # unignore all dirs
 !*/
+
+# unignore template directory
+!template/*
