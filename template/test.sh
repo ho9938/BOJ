@@ -12,7 +12,7 @@ then
 	g++ test.cpp -o test
 fi
 
-for i in $(seq 1 $3)
+for i in $(seq 1 $2)
 do
 	if [[ $1 = "py" ]]; then
 		./test.py < in$i > result
