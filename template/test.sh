@@ -29,7 +29,7 @@ do
 	# fi
 
 	echo "test case $i validation start..."
-	diff -y result out$i
+	diff -yw result out$i
 	echo ""
 	echo "test case $i validation complete..."
 	
