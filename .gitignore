@@ -11,3 +11,6 @@
 
 # unignore template directory
 !template/*
+
+# unignore generation macro
+!gen.sh
