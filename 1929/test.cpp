@@ -21,12 +21,9 @@ int main()
             prime[i * j] = false;
     }
 
-    string ans = "";
     for (int i = m; i <= n; i++)
         if (prime[i])
-            ans += to_string(i) + '\n';
-
-    cout << ans;
+            cout << i << '\n';
 
     return 0;
 }
