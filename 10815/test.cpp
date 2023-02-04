@@ -2,6 +2,14 @@
 #include <set>
 using namespace std;
 
+#define TEN_MILLION 10000000
+bool exist[2 * TEN_MILLION + 1];
+
+static int bias(int x)
+{
+    return x + TEN_MILLION;
+}
+
 int main()
 {
     ios::sync_with_stdio(false);
@@ -16,7 +24,7 @@ int main()
     {
         int x;
         cin >> x;
-        cards.insert(x);
+        exist[bias(x)] = true;
     }
 
     int m;
@@ -25,7 +33,7 @@ int main()
     {
         int x;
         cin >> x;
-        cout << int(cards.find(x) != cards.end()) << ' ';
+        cout << int(exist[bias(x)]) << ' ';
     }
 
     return 0;
